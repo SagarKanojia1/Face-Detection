@@ -9,7 +9,7 @@ while True:
     
     cv2.imshow("test window", frame) # show image in window
     
-    cv2.imwrite(r"C:\Users\sagar\Documents\Python projects\PY ADVANCED PROJECTS\images\0\image%04i.jpg" %cpt, frame)    #Give path to  train-images/0/ and keep image%04i.jpg as it is in this line. Your images will be stored at train-images/0/ folder
+    cv2.imwrite(r"image_path" %cpt, frame)    #Give path to  train-images/0/ and keep image%04i.jpg as it is in this line. Your images will be stored at train-images/0/ folder
     cpt += 1
     
     if cv2.waitKey(10)==ord('q'):
