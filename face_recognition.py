@@ -6,7 +6,7 @@ import os
 #Face detection is done
 def faceDetection(test_img):             
     gray_img=cv2.cvtColor(test_img,cv2.COLOR_BGR2GRAY)
-    face_haar=cv2.CascadeClassifier(r'C:\Users\sagar\Documents\Python projects\PY ADVANCED PROJECTS\haarcascade_frontalface_alt.xml') #Give path to haar classifier as i have given
+    face_haar=cv2.CascadeClassifier(r'classifier_path') #Give path to haar classifier as i have given
     faces=face_haar.detectMultiScale(gray_img,scaleFactor=1.2,minNeighbors=3)
     return faces,gray_img
 
