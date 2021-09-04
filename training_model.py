@@ -6,17 +6,16 @@ import face_recognition as fr
 print(fr)
 
 # Give path to the image which you want to test
-test_img = cv2.imread(
-    r'C:\Users\sagar\Documents\Python projects\PY ADVANCED PROJECTS\Sagar.jpg')
+test_img = cv2.imread(r'testing_path')
 
 faces_detected, gray_img = fr.faceDetection(test_img)
 print("face Detected: ", faces_detected)
 
-faces,faceID=fr.labels_for_training_data(r'C:\Users\sagar\Documents\Python projects\PY ADVANCED PROJECTS\images') #Give path to the train-images folder which has both labeled folder as 0 and 1
+faces,faceID=fr.labels_for_training_data(r'tarin_images') #Give path to the train-images folder which has both labeled folder as 0 and 1
 face_recognizer=fr.train_classifier(faces,faceID)
 
 # Give path of where trainingData.yml is saved
-face_recognizer.save(r'C:\Users\sagar\Documents\Python projects\PY ADVANCED PROJECTS\trainingData.yml')
+face_recognizer.save(r'trainingData_path')
 
 # Change names accordingly.  If you want to recognize only one person then write:- name={0:"name"} thats all. Dont write for id number 1.
 name = {0: "Sagar"}
